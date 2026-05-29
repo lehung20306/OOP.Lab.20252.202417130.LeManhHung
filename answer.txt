@@ -1,0 +1,19 @@
+1. Section 11: Polymorphism with the toString() method
+Observation:
+When iterating through the List<Media> and calling m.toString() , the console displays the specific information related to the actual object type (Book, CD, or DVD) instead of just the generic information from the Media class.  
+Explanation:
+This is an illustration of Dynamic Binding (Runtime Polymorphism). Although the list is defined to hold Media objects , the Java Virtual Machine (JVM) checks the actual type of each object during runtime. It then executes the corresponding toString() method that has been overridden in the specific subclass.  
+
+2. Section 12: Comparable vs. Comparator approach
+
+Question 1: What class should implement the Comparable interface?
+Answer: The Media class should implement the Comparable<Media> interface.  
+
+Question 2: How should you implement the compareTo() method to reflect the ordering we want?
+Answer: In the Media class, the compareTo() method should be overridden. It should first compare the title attribute alphabetically. If the titles are identical, it should then compare the cost attribute (for example, higher cost first).  
+
+Question 3: Can we have two ordering rules of the item (by title then cost and by cost then title) if we use this Comparable interface approach?
+Answer: No. The Comparable interface is used to define a single "natural" ordering for a class. To support multiple independent sorting rules (like switching between Title-first or Cost-first), the Comparator approach is necessary because it allows for multiple comparison classes.  
+
+Question 4: Suppose the DVDs have a different ordering rule (title, then decreasing length, then cost). How would you modify your code to allow this?
+Answer: There are two ways to achieve this:  Overriding compareTo() in the subclass: We can override the compareTo() method specifically inside the DigitalVideoDisc class to handle its unique logic (Title -> Length -> Cost).  Using a custom Comparator: We can create a specific DVDComparator class or use Comparator.thenComparing() to define this complex multi-field sorting rule specifically for DVD objects. 
