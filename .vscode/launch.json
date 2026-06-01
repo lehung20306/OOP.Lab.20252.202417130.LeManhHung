@@ -1,0 +1,44 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Aims",
+            "request": "launch",
+            "mainClass": "hust.soict.globalict.aims.Aims",
+            "projectName": "OOP Lab_bd43be9"
+        },
+        {
+            "type": "java",
+            "name": "AddDVDScreen",
+            "request": "launch",
+            "mainClass": "hust.soict.globalict.aims.screen.AddDVDScreen",
+            "projectName": "OOP Lab_bd43be9"
+        },
+        {
+            "type": "java",
+            "name": "CartScreen",
+            "request": "launch",
+            "mainClass": "hust.soict.globalict.aims.screen.CartScreen",
+            "projectName": "OOP Lab_bd43be9"
+        },
+        {
+            "type": "java",
+            "name": "StoreScreen",
+            "request": "launch",
+            "mainClass": "hust.soict.globalict.aims.screen.StoreScreen",
+            "projectName": "OOP Lab_bd43be9"
+        },
+        {
+            "type": "java",
+            "name": "Painter",
+            "request": "launch",
+            "mainClass": "hust.soict.globalict.javafx.Painter",
+            "projectName": "OOP Lab_bd43be9",
+            "vmArgs": "--module-path \"C:/Users/DELL 7490/Downloads/openjfx-21.0.11_windows-x64_bin-sdk/javafx-sdk-21.0.11/lib\" --add-modules javafx.controls,javafx.fxml"
+        }
+    ]
+}

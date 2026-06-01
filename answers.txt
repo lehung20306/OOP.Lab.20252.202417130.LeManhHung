@@ -1,0 +1,6 @@
+1. Section 1.3:
+Top-level containers: 
+AWT uses Frame. Swing uses JFrame. Unlike AWT, lightweight components in Swing cannot be added directly to the top-level container; they must be added to the content-pane.  
+Class names of components: Swing component classes typically add a "J" prefix to their AWT counterparts (e.g., AWT has Label, TextField, Button, whereas Swing has JLabel, JTextField, JButton).  
+2. Section 14:
+Answer: Because PlayerException inherits directly from java.lang.Exception, it is a Checked Exception. If we throw this exception but do not handle it with a try-catch block or a throws declaration, the Java compiler will report a syntax error and refuse to compile. If unhandled at runtime, the application will crash.
