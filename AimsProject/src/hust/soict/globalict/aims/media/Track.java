@@ -18,11 +18,15 @@ public class Track implements Playable{
     }
 
     @Override
-    public void play() {
-        System.out.println("Playing track: " + this.getTitle());
-        System.out.println("Track length: " + this.getLength());
+    public void play() throws hust.soict.globalict.aims.exception.PlayerException {
+        if (this.getLength() > 0) {
+            System.out.println("Playing track: " + this.getTitle());
+            System.out.println("Track length: " + this.getLength());
+        } else {
+            System.err.println("ERROR: Track length is non-positive!");
+            throw new hust.soict.globalict.aims.exception.PlayerException("ERROR: Track length is non-positive!");
+        }
     }
-
     @Override
     public boolean equals(Object obj) {
         if (!(obj instanceof Track)) return false;

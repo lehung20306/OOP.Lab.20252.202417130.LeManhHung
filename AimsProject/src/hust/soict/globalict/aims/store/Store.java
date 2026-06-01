@@ -5,7 +5,11 @@ import java.util.ArrayList;
 
 public class Store {
     private List<Media> itemsInStore = new ArrayList<Media>();
-    
+
+    public ArrayList<Media> getItemsInStore() {
+        return (ArrayList<Media>) itemsInStore;
+    }
+        
     public void print() {
         System.out.println("***********************CART***********************");
         System.out.println("Items:");
